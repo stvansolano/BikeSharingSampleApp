@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: stvansolanobikesharingsampleapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: stvansolanobikesharingsampleapp 
+    spec:
+      containers:
+        - name: stvansolanobikesharingsampleapp 
+          image: bikesharingregistry.azurecr.io/stvansolanobikesharingsampleapp 
+          ports:
+          - containerPort: 80
